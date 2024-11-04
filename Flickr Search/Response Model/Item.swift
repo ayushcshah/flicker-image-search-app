@@ -6,9 +6,11 @@
 //
 
 struct Item: Codable {
-    let title: String
-    let media: Media
     let author: String
+    let description: String
+    let media: Media
+    let published: String
+    let title: String
 }
 
 struct Media: Codable {

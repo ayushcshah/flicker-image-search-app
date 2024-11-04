@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ItemView: View {
+    @State var selectedItem: ViewItem?
+    @State private var showingSheet = false
     var item: ViewItem
     let itemWidth: CGFloat
     var body: some View {
@@ -36,6 +38,14 @@ struct ItemView: View {
                     }
                 )
                 .cornerRadius(10)
+        }
+        .accessibilityLabel("This is \(item.title), Tap on this to see more details")
+        .onTapGesture(perform: { _ in
+            selectedItem = item
+            showingSheet.toggle()
+        })
+        .sheet(isPresented: $showingSheet) {
+            ItemDetailView(item: $selectedItem)
         }
     }
 }

@@ -29,7 +29,11 @@ struct SearchCoordinatorTest {
     @Test mutating func searchCoordinatorSuccess() async throws {
         let result: Result<SearchResponse, SearchError> = .success(
             .init(title: "abc",
-                  items: [.init(title: "asdf", media: .init(m: "asd"), author: "asd")]
+                  items: [.init(author: "author 1",
+                                description: "description 1",
+                                media: .init(m: "m"),
+                                published: "",
+                                title: "123")]
                  )
         )
         mockSearchAPIProvider.result = result
@@ -39,6 +43,28 @@ struct SearchCoordinatorTest {
         #expect(mockSearchAPIProvider.result == result)
     }
 
+}
+
+struct TestDaysAgo {
+    @Test("Days since Post valid Date")
+    func daysSincePostedValidDate() async throws {
+        let viewItem = ViewItem(author: "author 1",
+                                description: "description 1",
+                                imageURL: "m",
+                                title: "",
+                                published: "2024-11-03T04:37:23Z")
+        #expect(viewItem.daysSincePosted != nil)
+    }
+    
+    @Test("Days since Post Invalid Date")
+    func daysSincePostedInvalidDate() async throws {
+        let viewItem = ViewItem(author: "author 1",
+                                description: "description 1",
+                                imageURL: "m",
+                                title: "",
+                                published: "abc")
+        #expect(viewItem.daysSincePosted == nil)
+    }
 }
 
 struct MockNetworkConfigurationProvider: NetworkConfigurationProviding {
