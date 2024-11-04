@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Flickr Search
+
+  Created by Ayush Shah on 11/3/24.
+  
+*/
+"loading" = "Loading...";
+"search" = "Search...";

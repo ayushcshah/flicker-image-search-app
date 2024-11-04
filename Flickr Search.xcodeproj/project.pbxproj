@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2A8B5CA42CD84DA3007C6DD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A8B5CA22CD84DA3007C6DD5 /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		2A9223312CD83500000AA21C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A8B5CA32CD84DA3007C6DD5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2A9223202CD834FE000AA21C /* Flickr Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flickr Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9223302CD83500000AA21C /* Flickr SearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flickr SearchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A92233A2CD83500000AA21C /* Flickr SearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flickr SearchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +80,7 @@
 		2A9223172CD834FE000AA21C = {
 			isa = PBXGroup;
 			children = (
+				2A8B5CA22CD84DA3007C6DD5 /* Localizable.strings */,
 				2A9223222CD834FE000AA21C /* Flickr Search */,
 				2A9223332CD83500000AA21C /* Flickr SearchTests */,
 				2A92233D2CD83500000AA21C /* Flickr SearchUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A8B5CA42CD84DA3007C6DD5 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +274,17 @@
 			targetProxy = 2A92233B2CD83500000AA21C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2A8B5CA22CD84DA3007C6DD5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A8B5CA32CD84DA3007C6DD5 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2A9223422CD83500000AA21C /* Debug */ = {

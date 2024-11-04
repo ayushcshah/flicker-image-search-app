@@ -11,7 +11,7 @@ import SwiftUI
 struct Flickr_SearchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SearchView(searchCoordinator: SearchCoordinator(networkConfiguration: FlickerNetworkConfigurationProvider()))
         }
     }
 }
